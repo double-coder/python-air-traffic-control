@@ -7,8 +7,8 @@ Demonstrate how to create a menu for user selection
 import os, sys, pygame, string
 from pygame.locals import *
 
-if not pygame.font: print 'Warning, fonts disabled'
-if not pygame.mixer: print 'Warning, sound disabled'
+if not pygame.font: print ('Warning, fonts disabled')
+if not pygame.mixer: print ('Warning, sound disabled')
 
 class Button:
     def __init__(self,pos,text,cb=None):
@@ -99,11 +99,11 @@ def main():
                 return
             elif event.type == MOUSEMOTION:
                 if startButton.mouseOver(event.pos):
-                    print "Mouse over start button"
+                    print ("Mouse over start button")
                 elif scoresButton.mouseOver(event.pos):
-                    print "Mouse over scores button"
+                    print ("Mouse over scores button")
                 elif quitButton.mouseOver(event.pos):
-                    print "Mouse over quit button"
+                    print ("Mouse over quit button")
                 else:
                     #print "Mouse moved " + str(event.pos)
                     pass
